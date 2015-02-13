@@ -2,29 +2,30 @@
 <html>
 <head>
   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <script src="js/jquery-1.11.2.js"></script>
   <script src="js/scripts.js"></script>
   <title>Triangle Type</title>
 </head>
 <body>
   <div class="container">
-    <h1>Triangle Type</h1>
+    <h1><strong>Triangle Type</strong></h1><h3><strong>Enter side lengths to see what type of triangle it is!</strong></h3>
 
     <form id="triangle">
       <div class="form-group">
         <label for="side_one">side one: </label>
-        <input id="side_one" type="text">
+        <input id="side_one" placeholder="3" type="text">
         <label for="side_two">side two: </label>
-        <input id="side_two" type="text">
+        <input id="side_two" placeholder="3" type="text">
         <label for="side_three">side three: </label>
-        <input id="side_three" type="text">
+        <input id="side_three" placeholder="7" type="text">
       </div>
 
-      <button type="submit" class="btn">Find out!</button>
+      <button type="submit" class="btn btn-primary">Find out!</button>
     </form>
 
     <div id="result">
-      <p>Your triangle is <span class="triangletype"></span></p>
+      <h3>Your triangle is <span class="triangletype"></span></h3>
     </div>
   </div>
 </body>
