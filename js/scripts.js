@@ -1,5 +1,5 @@
 var triangleType = function(side) {
-  if (side[0] === (side[1] || side[2])) {
+  if ((side[0] === side[1]) || (side[0] === side[2])) {
     if ((side[1] === side[2])) {
       return "an equilateral triangle"
     } if ((side[0] === side[1]) && (side[2] > (side[0] + side[1]))) {
@@ -9,8 +9,12 @@ var triangleType = function(side) {
     } else {
       return "an isosceles triangle"
     }
-  } else if ((side[1] === side[2]) && (side[0] <= (side[1] + side[2]))) {
-    return "an isosceles triangle"
+  } else if (side[1] === side[2]) {
+    if (side[0] > (side[1] + side[2])) {
+      return "not a triangle"
+    } else {
+      return "an isosceles triangle"
+    }
   } else {
     return "a scalene triangle"
   }

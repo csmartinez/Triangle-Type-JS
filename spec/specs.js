@@ -8,7 +8,7 @@ describe('triangleType', function() {
   });
 
   it('is isosceles if any triangle sides are the same', function() {
-    expect(triangleType([7, 7, 6])).to.equal("an isosceles triangle");
+    expect(triangleType([2, 6, 6])).to.equal("an isosceles triangle");
   });
 
   it('is equilateral if all triangle sides are the same', function() {
